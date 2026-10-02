@@ -24,18 +24,25 @@
 
 int sum = 0;
 int count = 0;
+int max = 0;
 
 System.Console.WriteLine("Вводите оценки, для завершения введите -1:");
 int grade = int.Parse(Console.ReadLine());
 while (grade != -1) {
     sum += grade;
     count++;
+
+    if (count == 1 || grade > max) {
+        max = grade;
+    }
+
     grade = int.Parse(System.Console.ReadLine());
-    
+
 }
 
 if (count > 0) {
     Console.WriteLine($"Средний балл: {(double)sum / count}");
+    System.Console.WriteLine($"Наибольшее введенная оценка: {max}");
 } else {
     System.Console.WriteLine("Оценок не было введено");
 }

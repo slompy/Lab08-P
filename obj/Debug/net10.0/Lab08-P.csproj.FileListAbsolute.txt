@@ -1,0 +1,15 @@
+C:\Users\Student_01\Documents\Lab08-P\bin\Debug\net10.0\Lab08-P.exe
+C:\Users\Student_01\Documents\Lab08-P\bin\Debug\net10.0\Lab08-P.deps.json
+C:\Users\Student_01\Documents\Lab08-P\bin\Debug\net10.0\Lab08-P.runtimeconfig.json
+C:\Users\Student_01\Documents\Lab08-P\bin\Debug\net10.0\Lab08-P.dll
+C:\Users\Student_01\Documents\Lab08-P\bin\Debug\net10.0\Lab08-P.pdb
+C:\Users\Student_01\Documents\Lab08-P\obj\Debug\net10.0\Lab08-P.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student_01\Documents\Lab08-P\obj\Debug\net10.0\Lab08-P.AssemblyInfoInputs.cache
+C:\Users\Student_01\Documents\Lab08-P\obj\Debug\net10.0\Lab08-P.AssemblyInfo.cs
+C:\Users\Student_01\Documents\Lab08-P\obj\Debug\net10.0\Lab08-P.csproj.CoreCompileInputs.cache
+C:\Users\Student_01\Documents\Lab08-P\obj\Debug\net10.0\Lab08-P.sourcelink.json
+C:\Users\Student_01\Documents\Lab08-P\obj\Debug\net10.0\Lab08-P.dll
+C:\Users\Student_01\Documents\Lab08-P\obj\Debug\net10.0\refint\Lab08-P.dll
+C:\Users\Student_01\Documents\Lab08-P\obj\Debug\net10.0\Lab08-P.pdb
+C:\Users\Student_01\Documents\Lab08-P\obj\Debug\net10.0\Lab08-P.genruntimeconfig.cache
+C:\Users\Student_01\Documents\Lab08-P\obj\Debug\net10.0\ref\Lab08-P.dll

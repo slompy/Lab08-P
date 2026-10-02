@@ -22,46 +22,58 @@
 // Console.WriteLine($"Было введено оценок всего: {countGrades}");
 // Console.WriteLine("Ввод завершён");
 
-int sum = 0;
-int count = 0;
-int max = 0;
+// int sum = 0;
+// int count = 0;
+// int max = 0;
 
-System.Console.WriteLine("Вводите оценки, для завершения введите -1:");
-int grade = int.Parse(Console.ReadLine()!);
-while (grade != -1) {
-    sum += grade;
-    count++;
+// System.Console.WriteLine("Вводите оценки, для завершения введите -1:");
+// int grade = int.Parse(Console.ReadLine()!);
+// while (grade != -1) {
+//     sum += grade;
+//     count++;
 
-    if (count == 1 || grade > max) {
-        max = grade;
-    }
+//     if (count == 1 || grade > max) {
+//         max = grade;
+//     }
 
-    grade = int.Parse(System.Console.ReadLine()!);
+//     grade = int.Parse(System.Console.ReadLine()!);
+// g
+// }
 
-}
-
-if (count > 0) {
-    Console.WriteLine($"Средний балл: {(double)sum / count}");
-    System.Console.WriteLine($"Наибольшее введенная оценка: {max}");
-} else {
-    System.Console.WriteLine("Оценок не было введено");
-}
+// if (count > 0) {
+//     Console.WriteLine($"Средний балл: {(double)sum / count}");
+//     System.Console.WriteLine($"Наибольшее введенная оценка: {max}");
+// } else {
+//     System.Console.WriteLine("Оценок не было введено");
+// }
 
 
-string correctPassword = "qwerty123";
-int failCount = 0;
+// string correctPassword = "qwerty123";
+// int failCount = 0;
 
-while (true) {
-    System.Console.WriteLine("Введите пароль от личного кабинета: ");
-    string password = System.Console.ReadLine()!;
+// while (true) {
+//     System.Console.WriteLine("Введите пароль от личного кабинета: ");
+//     string password = System.Console.ReadLine()!;
 
-     if (password == correctPassword) {
-        System.Console.WriteLine("Доступ разрешён");
-        Console.WriteLine($"Неверных попыток: {failCount}");
-        break;
-     }
+//      if (password == correctPassword) {
+//         System.Console.WriteLine("Доступ разрешён");
+//         Console.WriteLine($"Неверных попыток: {failCount}");
+//         break;
+//      }
 
-     System.Console.WriteLine("Неверный пароль, попробуйте снова");
-     failCount++;
-}
+//      System.Console.WriteLine("Неверный пароль, попробуйте снова");
+//      failCount++;
+// }
 
+string answer;
+
+do {
+    System.Console.Write("Введите дату посещения (например, 01.01): ");
+    string date = System.Console.ReadLine()!;
+    System.Console.WriteLine($"Запись добавлена: {date}");
+
+    System.Console.Write("Добавить еще одну запись? (да/нет): ");
+    answer = System.Console.ReadLine()!;
+} while (answer == "да");
+
+System.Console.WriteLine("Дневник сохранён");

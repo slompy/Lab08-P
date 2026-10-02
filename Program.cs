@@ -27,7 +27,7 @@ int count = 0;
 int max = 0;
 
 System.Console.WriteLine("Вводите оценки, для завершения введите -1:");
-int grade = int.Parse(Console.ReadLine());
+int grade = int.Parse(Console.ReadLine()!);
 while (grade != -1) {
     sum += grade;
     count++;
@@ -36,7 +36,7 @@ while (grade != -1) {
         max = grade;
     }
 
-    grade = int.Parse(System.Console.ReadLine());
+    grade = int.Parse(System.Console.ReadLine()!);
 
 }
 
@@ -53,7 +53,7 @@ int failCount = 0;
 
 while (true) {
     System.Console.WriteLine("Введите пароль от личного кабинета: ");
-    string password = System.Console.ReadLine();
+    string password = System.Console.ReadLine()!;
 
      if (password == correctPassword) {
         System.Console.WriteLine("Доступ разрешён");

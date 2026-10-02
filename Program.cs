@@ -65,15 +65,31 @@
 //      failCount++;
 // }
 
-string answer;
+// string answer;
 
-do {
-    System.Console.Write("Введите дату посещения (например, 01.01): ");
-    string date = System.Console.ReadLine()!;
-    System.Console.WriteLine($"Запись добавлена: {date}");
+// do {
+//     System.Console.Write("Введите дату посещения (например, 01.01): ");
+//     string date = System.Console.ReadLine()!;
+//     System.Console.WriteLine($"Запись добавлена: {date}");
 
-    System.Console.Write("Добавить еще одну запись? (да/нет): ");
-    answer = System.Console.ReadLine()!;
-} while (answer == "да");
+//     System.Console.Write("Добавить еще одну запись? (да/нет): ");
+//     answer = System.Console.ReadLine()!;
+// } while (answer == "да");
 
-System.Console.WriteLine("Дневник сохранён");
+// System.Console.WriteLine("Дневник сохранён");
+
+
+// Задача Б
+Console.WriteLine();
+Console.Write("Вводите имена учеников, для завершения введите end: ");
+string names = Console.ReadLine()!;
+int countNames = 0;
+
+while (names != "end") {
+    Console.WriteLine($"Имя принято: {names}");
+    names = Console.ReadLine()!;
+    countNames++;
+}
+Console.WriteLine($"Было введено имён всего: {countNames}");
+Console.WriteLine("Ввод завершён");
+// Задача 

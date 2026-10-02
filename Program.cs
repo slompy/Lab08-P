@@ -79,17 +79,30 @@
 // System.Console.WriteLine("Дневник сохранён");
 
 
-// Задача Б
-Console.WriteLine();
-Console.Write("Вводите имена учеников, для завершения введите end: ");
-string names = Console.ReadLine()!;
-int countNames = 0;
+// // Задача Б
+// Console.WriteLine();
+// Console.Write("Вводите имена учеников, для завершения введите end: ");
+// string names = Console.ReadLine()!;
+// int countNames = 0;
 
-while (names != "end") {
-    Console.WriteLine($"Имя принято: {names}");
-    names = Console.ReadLine()!;
-    countNames++;
+// while (names != "end") {
+//     Console.WriteLine($"Имя принято: {names}");
+//     names = Console.ReadLine()!;
+//     countNames++;
+// }
+// Console.WriteLine($"Было введено имён всего: {countNames}");
+// Console.WriteLine("Ввод завершён");
+// Задача Г
+int correctNumber = 7;
+
+while (true) {
+    System.Console.WriteLine("Введите целое число: ");
+    int userNumber = int.Parse(System.Console.ReadLine()!);
+
+     if (userNumber == correctNumber) {
+        System.Console.WriteLine("Найдено!");
+        break;
+     }
+
+     System.Console.WriteLine("Неверное число, попробуйте ещё!");
 }
-Console.WriteLine($"Было введено имён всего: {countNames}");
-Console.WriteLine("Ввод завершён");
-// Задача 

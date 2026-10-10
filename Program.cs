@@ -73,30 +73,65 @@
 // System.Console.WriteLine("Дневник сохранён");
 
 
-// Задача Б
-Console.WriteLine();
-Console.Write("Вводите имена учеников, для завершения введите end: ");
-string names = Console.ReadLine()!;
-int countNames = 0;
+// // Задача Б
+// Console.WriteLine();
+// Console.Write("Вводите имена учеников, для завершения введите end: ");
+// string names = Console.ReadLine()!;
+// int countNames = 0;
 
-while (names != "end") {
-    Console.WriteLine($"Имя принято: {names}");
-    names = Console.ReadLine()!;
-    countNames++;
+// while (names != "end") {
+//     Console.WriteLine($"Имя принято: {names}");
+//     names = Console.ReadLine()!;
+//     countNames++;
+// }
+// Console.WriteLine($"Было введено имён всего: {countNames}");
+// Console.WriteLine("Ввод завершён");
+// // Задача Г
+// int correctNumber = 7;
+
+// while (true) {
+//     System.Console.WriteLine("Введите целое число: ");
+//     int userNumber = int.Parse(System.Console.ReadLine()!);
+
+//      if (userNumber == correctNumber) {
+//         System.Console.WriteLine("Найдено!");
+//         break;
+//      }
+
+//      System.Console.WriteLine("Неверное число, попробуйте ещё!");
+// }
+
+// Console.Write("Введите свою фамилию: ");
+// string surname = Console.ReadLine()!.Trim();
+// if (string.IsNullOrEmpty(surname)) {
+// Console.WriteLine("Фамилия не введена. Завершение работы.");
+// return;
+// }
+// Random rnd = new(surname.GetHashCode() + DateTime.Now.DayOfYear);
+// var assigned = Enumerable.Range(1, 10)
+// .OrderBy(_ => rnd.Next())
+// .Take(2)
+// .OrderBy(x => x)
+// .ToList();
+// Console.WriteLine($"Задачи: №{assigned[0]} и №{assigned[1]}");
+
+
+// Вариант 7
+
+int counts = 1;
+int sum = 1;
+System.Console.Write("Введите температуру: ");
+int temps = int.Parse(System.Console.ReadLine()!);
+
+while (counts != 7) {
+    sum += temps;
+    counts++;
+    System.Console.Write("Введите температуру: ");
+    temps = int.Parse(System.Console.ReadLine()!);
 }
-Console.WriteLine($"Было введено имён всего: {countNames}");
-Console.WriteLine("Ввод завершён");
-// Задача Г
-int correctNumber = 7;
-
-while (true) {
-    System.Console.WriteLine("Введите целое число: ");
-    int userNumber = int.Parse(System.Console.ReadLine()!);
-
-     if (userNumber == correctNumber) {
-        System.Console.WriteLine("Найдено!");
-        break;
-     }
-
-     System.Console.WriteLine("Неверное число, попробуйте ещё!");
+System.Console.WriteLine();
+if (counts == 7) {
+    Console.WriteLine($"Средняя температура за 7 дней: {(double)sum / counts}");
+} else {
+    System.Console.WriteLine("Температуры не было введено");
 }

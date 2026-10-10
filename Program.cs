@@ -120,56 +120,97 @@
 // Console.WriteLine($"Задачи: №{assigned[0]} и №{assigned[1]}");
 
 
-// Вариант 7
+// // Вариант 7
 
-int counts = 1;
-int sum = 1;
-System.Console.Write("Введите температуру: ");
-int temps = int.Parse(System.Console.ReadLine()!);
+// int counts = 1;
+// int sum = 1;
+// System.Console.Write("Введите температуру: ");
+// int temps = int.Parse(System.Console.ReadLine()!);
 
-while (counts != 7) {
-    sum += temps;
-    counts++;
-    System.Console.Write("Введите температуру: ");
-    temps = int.Parse(System.Console.ReadLine()!);
-}
-System.Console.WriteLine();
-if (counts == 7) {
-    Console.WriteLine($"Средняя температура за 7 дней: {(double)sum / counts}");
-} else {
-    System.Console.WriteLine("Температуры не было введено");
-}
+// while (counts != 7) {
+//     sum += temps;
+//     counts++;
+//     System.Console.Write("Введите температуру: ");
+//     temps = int.Parse(System.Console.ReadLine()!);
+// }
+// System.Console.WriteLine();
+// if (counts == 7) {
+//     Console.WriteLine($"Средняя температура за 7 дней: {(double)sum / counts}");
+// } else {
+//     System.Console.WriteLine("Температуры не было введено");
+// }
 
-System.Console.WriteLine();
+// System.Console.WriteLine();
 
-// Вариант 8
+// // Вариант 8
 
-string correctPassword = "spamton";
+// string correctPassword = "spamton";
+// int failCount = 0;
+
+
+// while (true) {
+//     while (failCount < 3) {
+//     System.Console.WriteLine("Введите пароль от личного кабинета: ");
+//     string password = System.Console.ReadLine()!;
+//      if (password == correctPassword) {
+//         System.Console.WriteLine("Доступ разрешён");
+//         break;
+//      }  else {
+//         System.Console.WriteLine("Неверный пароль, попробуйте снова");
+//         System.Console.WriteLine();
+//         failCount++;
+//         Console.WriteLine($"Неверных попыток: {failCount}");
+//         System.Console.WriteLine();
+//      }
+
+
+//    }
+//    if (failCount == 3) {
+//         System.Console.WriteLine("Доступ запрещён");
+//         break;
+//    } else {
+//     break;
+//    }
+// }
+
+
+// Доп задание
+
+int correctPin = 0987;
 int failCount = 0;
 
 
-while (true) {
-    while (failCount < 3) {
-    System.Console.WriteLine("Введите пароль от личного кабинета: ");
-    string password = System.Console.ReadLine()!;
-     if (password == correctPassword) {
-        System.Console.WriteLine("Доступ разрешён");
-        break;
-     }  else {
-        System.Console.WriteLine("Неверный пароль, попробуйте снова");
-        System.Console.WriteLine();
-        failCount++;
-        Console.WriteLine($"Неверных попыток: {failCount}");
-        System.Console.WriteLine();
-     }
 
+while (failCount < 3) {
+System.Console.WriteLine("Введите PIN-код: ");
+int pin = int.Parse(System.Console.ReadLine()!);
+ if (pin == correctPin) {
+    System.Console.WriteLine();
+    int sum = 0;
+    
+    System.Console.WriteLine("Введите сумму снятия, для завершения введите 0:");
+    int grade = int.Parse(Console.ReadLine()!);
+    while (grade != 0) {
+        sum += grade;
+        System.Console.WriteLine();
+        grade = int.Parse(System.Console.ReadLine()!);
+    
+    }
 
-   }
-   if (failCount == 3) {
-        System.Console.WriteLine("Доступ запрещён");
-        break;
-   } else {
+    System.Console.WriteLine($"Итоговая снятая сумма: {sum}");
     break;
-   }
+
+ }  else {
+    System.Console.WriteLine("Неверный PIN-код, попробуйте снова");
+    System.Console.WriteLine();
+    failCount++;
+    Console.WriteLine($"Неверных попыток: {failCount}");
+    System.Console.WriteLine();
+ }
+
+}
+
+if (failCount == 3) {
+     System.Console.WriteLine("Карта заблокирована");
 }
 

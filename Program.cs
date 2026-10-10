@@ -140,24 +140,33 @@
 //     System.Console.WriteLine("Температуры не было введено");
 // }
 
+// System.Console.WriteLine();
+
 // Вариант 8
+
 string correctPassword = "spamton";
 int failCount = 0;
 
 
-while (failCount < 3) {
+while (true) {
+    while (failCount < 3) {
     System.Console.WriteLine("Введите пароль от личного кабинета: ");
     string password = System.Console.ReadLine()!;
-
      if (password == correctPassword) {
         System.Console.WriteLine("Доступ разрешён");
         break;
-     } else {
+     }  else {
         System.Console.WriteLine("Неверный пароль, попробуйте снова");
         failCount++;
         Console.WriteLine($"Неверных попыток: {failCount}");
-
      }
 
-     System.Console.WriteLine("Доступ заблокирован");
+
+   }
+   if (failCount == 3) {
+        System.Console.WriteLine("Доступ запрещён");
+        break;
+   } else {
+    break;
+   }
 }

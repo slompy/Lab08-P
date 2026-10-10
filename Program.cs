@@ -40,6 +40,8 @@
 
 // }
 
+
+
 // if (count > 0) {
 //     Console.WriteLine($"Средний балл: {(double)sum / count}");
 //     System.Console.WriteLine($"Наибольшее введенная оценка: {max}");
@@ -47,6 +49,8 @@
 //     System.Console.WriteLine("Оценок не было введено");
 // }
 
+// string correctPassword = "qwerty123";
+// int failCount = 0;
 // while (true) {
 //     System.Console.WriteLine("Введите пароль от личного кабинета: ");
 //     string password = System.Console.ReadLine()!;
@@ -116,22 +120,44 @@
 // Console.WriteLine($"Задачи: №{assigned[0]} и №{assigned[1]}");
 
 
-// Вариант 7
+// // Вариант 7
 
-int counts = 1;
-int sum = 1;
-System.Console.Write("Введите температуру: ");
-int temps = int.Parse(System.Console.ReadLine()!);
+// int counts = 1;
+// int sum = 1;
+// System.Console.Write("Введите температуру: ");
+// int temps = int.Parse(System.Console.ReadLine()!);
 
-while (counts != 7) {
-    sum += temps;
-    counts++;
-    System.Console.Write("Введите температуру: ");
-    temps = int.Parse(System.Console.ReadLine()!);
-}
-System.Console.WriteLine();
-if (counts == 7) {
-    Console.WriteLine($"Средняя температура за 7 дней: {(double)sum / counts}");
-} else {
-    System.Console.WriteLine("Температуры не было введено");
+// while (counts != 7) {
+//     sum += temps;
+//     counts++;
+//     System.Console.Write("Введите температуру: ");
+//     temps = int.Parse(System.Console.ReadLine()!);
+// }
+// System.Console.WriteLine();
+// if (counts == 7) {
+//     Console.WriteLine($"Средняя температура за 7 дней: {(double)sum / counts}");
+// } else {
+//     System.Console.WriteLine("Температуры не было введено");
+// }
+
+// Вариант 8
+string correctPassword = "spamton";
+int failCount = 0;
+
+
+while (failCount < 3) {
+    System.Console.WriteLine("Введите пароль от личного кабинета: ");
+    string password = System.Console.ReadLine()!;
+
+     if (password == correctPassword) {
+        System.Console.WriteLine("Доступ разрешён");
+        break;
+     } else {
+        System.Console.WriteLine("Неверный пароль, попробуйте снова");
+        failCount++;
+        Console.WriteLine($"Неверных попыток: {failCount}");
+
+     }
+
+     System.Console.WriteLine("Доступ заблокирован");
 }
